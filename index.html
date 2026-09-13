@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Clases de portugués europeo, francés e inglés. Conversación, certificaciones oficiales (CAPLE, DELF, Cambridge), oposiciones y apoyo escolar. Online y presencial.">
+<!-- BODY-START -->
+<title>Clases con Filo</title>
+<style>
+:root{
+  --bg:#F4F7F5; --bg2:#E9EFEC; --ink:#14302D; --ink2:#4F615E; --line:#CBD6D2;
+  --acc:#1E7A6C; --acc-ink:#FFFFFF; --acc-soft:#D8EDE7;
+  --todo:#F6D66A; --todo-ink:#4A3A00;
+  --wa:#1E7A6C;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1F1D; --bg2:#172A27; --ink:#E4EEEA; --ink2:#9FB3AE; --line:#2C423E;
+    --acc:#5FC4B0; --acc-ink:#0B1F1C; --acc-soft:#1B3B36;
+    --todo:#8A6B00; --todo-ink:#FFF1BF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1F1D; --bg2:#172A27; --ink:#E4EEEA; --ink2:#9FB3AE; --line:#2C423E;
+  --acc:#5FC4B0; --acc-ink:#0B1F1C; --acc-soft:#1B3B36;
+  --todo:#8A6B00; --todo-ink:#FFF1BF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; background:var(--bg)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Source Sans 3","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px; line-height:1.55;
+  padding-block:0 4rem; padding-inline:clamp(16px,4vw,40px);
+}
+h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,"Times New Roman",serif; font-weight:600; line-height:1.15; text-wrap:balance; margin:0}
+h1{font-size:clamp(2rem,5.2vw,3.4rem); letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1.2rem}
+p{margin:0}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc); outline-offset:3px}
+.wrap{max-width:1040px; margin-inline:auto}
+.eyebrow{font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink2); font-weight:600}
+
+/* draft banner: delete this block and the <aside class="draft"> when the page goes live */
+.draft{background:var(--todo); color:var(--todo-ink); font-size:.92rem; padding:.55rem 1rem; margin-inline:calc(-1 * clamp(16px,4vw,40px)); text-align:center}
+.draft b{font-weight:700}
+mark.todo{background:var(--todo); color:var(--todo-ink); padding:0 .3em; border-radius:2px; font-style:normal}
+
+header.top{display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; padding-block:1.2rem; border-bottom:1px solid var(--line)}
+.brand{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; font-size:1.25rem; font-weight:600}
+.brand small{display:block; font-family:inherit; font-weight:400; font-size:.8rem; color:var(--ink2); letter-spacing:.04em}
+nav{display:flex; gap:1.2rem; flex-wrap:wrap; font-size:.95rem}
+nav a{color:var(--ink); text-decoration:none; border-bottom:1px solid transparent}
+nav a:hover{border-bottom-color:var(--acc)}
+
+.btn{display:inline-flex; align-items:center; gap:.55rem; background:var(--acc); color:var(--acc-ink); text-decoration:none; font-weight:600; padding:.75rem 1.2rem; border-radius:6px; border:0; font-size:1rem}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:20px; height:20px; fill:currentColor}
+.btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+
+.hero{display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:2.5rem; align-items:end; padding-block:3.5rem 2.5rem; border-bottom:1px solid var(--line)}
+.hero .lead{font-size:1.2rem; color:var(--ink2); max-width:34em; margin-top:1.1rem}
+.hero .actions{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.6rem}
+.langs{display:grid; gap:.6rem}
+.lang{display:grid; grid-template-columns:auto 1fr; gap:.2rem 1rem; align-items:baseline; padding:.85rem 1rem; background:var(--bg2); border-left:3px solid var(--acc)}
+.lang b{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; font-size:1.15rem; font-weight:600}
+.lang span{color:var(--ink2); font-size:.95rem; grid-column:2}
+.lang em{font-style:normal; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); grid-column:1; grid-row:1 / span 2; align-self:start; padding-top:.35rem; font-variant-numeric:tabular-nums}
+
+section{padding-block:3rem; border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); gap:1rem 3rem; margin-bottom:2rem}
+.sec-head p{color:var(--ink2); max-width:38em}
+
+.types{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+.type{background:var(--bg); padding:1.5rem 1.4rem; display:grid; gap:.6rem; align-content:start}
+.type h3{color:var(--acc)}
+.type p{color:var(--ink2)}
+.type ul{margin:0; padding-left:1.1rem; color:var(--ink); font-size:.95rem; display:grid; gap:.2rem}
+
+.steps{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:1.2rem; counter-reset:step}
+.step{counter-increment:step; display:grid; gap:.5rem; align-content:start; padding-top:.9rem; border-top:2px solid var(--acc)}
+.step::before{content:counter(step); font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; font-size:1.6rem; font-weight:600; color:var(--acc); line-height:1}
+.step h3{font-size:1.05rem}
+.step p{color:var(--ink2); font-size:.95rem}
+
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse; width:100%; font-size:.95rem; min-width:560px}
+th,td{text-align:left; padding:.65rem .8rem; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); font-weight:600}
+td.lvl{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; font-size:1.15rem; font-weight:600; color:var(--acc); font-variant-numeric:tabular-nums; white-space:nowrap}
+td code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:.9em; background:var(--bg2); padding:.05em .35em; border-radius:3px}
+.note{font-size:.9rem; color:var(--ink2); margin-top:.9rem; max-width:60em}
+
+.contact{display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:2.5rem}
+.contact .big{font-size:1.25rem; max-width:30em}
+.contact .actions{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.4rem}
+dl{display:grid; grid-template-columns:auto 1fr; gap:.5rem 1.2rem; margin:0; align-content:start}
+dt{font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); font-weight:600; padding-top:.15rem}
+dd{margin:0}
+
+footer{padding-block:2rem 0; font-size:.88rem; color:var(--ink2); display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+
+@media (max-width:820px){
+  .hero,.sec-head,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .types,.steps{grid-template-columns:1fr}
+  .hero{padding-block:2.2rem 2rem}
+}
+</style>
+
+<aside class="draft" role="note"><b>Borrador.</b> Lo marcado en amarillo lo confirma Filo a la vuelta (26/9). Se quita este aviso al publicar.</aside>
+
+<div class="wrap">
+<header class="top">
+  <div class="brand"><mark class="todo">Nombre y apellido</mark><small>Profesora de portugués, francés e inglés</small></div>
+  <nav aria-label="Secciones">
+    <a href="#clases">Clases</a>
+    <a href="#proceso">Cómo empezamos</a>
+    <a href="#niveles">Niveles</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <p class="eyebrow">Online y presencial en <mark class="todo">ciudad</mark></p>
+    <h1>Portugués europeo, francés e inglés. Clases pensadas para lo que tú necesitas.</h1>
+    <p class="lead">Conversación, preparación de exámenes oficiales, oposiciones o apoyo con el libro del cole. Primero hablamos, después armamos el horario.</p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/34XXXXXXXXX?text=Hola%2C%20me%20interesan%20las%20clases%20de%20idiomas" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.3-.2-.5-.3z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a class="btn ghost" href="#proceso">Ver cómo funciona</a>
+    </div>
+  </div>
+  <div class="langs" aria-label="Idiomas">
+    <div class="lang"><em>PT</em><b>Portugués europeo</b><span>Lengua materna. Preparación CAPLE de A1 a C1.</span></div>
+    <div class="lang"><em>FR</em><b>Francés</b><span>Primaria, ESO, Bachillerato y DELF / DALF.</span></div>
+    <div class="lang"><em>EN</em><b>Inglés</b><span>Apoyo escolar hasta Bachillerato y exámenes oficiales.</span></div>
+  </div>
+</div>
+
+<section id="clases">
+  <div class="sec-head">
+    <h2>Cuatro formas de trabajar</h2>
+    <p>Cada alumno viene con un objetivo distinto. La clase se monta alrededor de ese objetivo, no al revés.</p>
+  </div>
+  <div class="types">
+    <article class="type">
+      <h3>Conversación</h3>
+      <p>Para soltarte hablando, ganar vocabulario real y perder el miedo. Sin libro obligatorio.</p>
+      <ul>
+        <li>Temas que te interesan a ti</li>
+        <li>Corrección de pronunciación y acento europeo (portugués)</li>
+        <li>Individual o en pareja</li>
+      </ul>
+    </article>
+    <article class="type">
+      <h3>Certificación oficial</h3>
+      <p>Preparación completa del examen: formato, tiempos, criterios de corrección y simulacros.</p>
+      <ul>
+        <li>Portugués: CAPLE (Universidade de Lisboa), de A1 a C1</li>
+        <li>Francés: DELF y DALF</li>
+        <li>Inglés: Cambridge y Escuela Oficial de Idiomas</li>
+      </ul>
+    </article>
+    <article class="type">
+      <h3>Oposiciones</h3>
+      <p>Cuando el idioma es un requisito o un mérito en tu oposición y necesitas llegar al nivel con fecha.</p>
+      <ul>
+        <li>Plan por fases hasta la convocatoria</li>
+        <li>Acreditación del nivel que pide la plaza</li>
+        <li>Prueba oral y escrita ensayadas</li>
+      </ul>
+    </article>
+    <article class="type">
+      <h3>Apoyo escolar</h3>
+      <p>Seguimos el libro y el ritmo de tu centro para que las notas suban y el idioma se entienda de verdad.</p>
+      <ul>
+        <li>Primaria, ESO y Bachillerato</li>
+        <li>Con el libro asignado en el colegio o instituto</li>
+        <li>Refuerzo puntual antes de exámenes o todo el curso</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="sec-head">
+    <h2>Cómo empezamos</h2>
+    <p>Antes de la primera clase hay una conversación. Así el horario y el plan salen de tus necesidades, no de una plantilla.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><h3>Me escribes</h3><p>Por WhatsApp. Me cuentas idioma, objetivo y disponibilidad.</p></div>
+    <div class="step"><h3>Horario tentativo</h3><p>Te propongo días y horas posibles según lo que tengas libre.</p></div>
+    <div class="step"><h3>Videollamada</h3><p>Unos minutos para entender tu punto de partida y qué quieres conseguir: apoyo todo el curso, un examen oficial o una oposición.</p></div>
+    <div class="step"><h3>Plan y precio</h3><p>Te confirmo el plan, la frecuencia y el precio por hora antes de empezar.</p></div>
+    <div class="step"><h3>Primera clase</h3><p>Online o presencial. Ajustamos lo que haga falta en las primeras semanas.</p></div>
+  </div>
+  <p class="note">Si vienes a través de una academia, el proceso es el mismo: la academia me pasa tu disponibilidad, abrimos un grupo con los tres y hacemos la videollamada de presentación.</p>
+</section>
+
+<section id="niveles">
+  <div class="sec-head">
+    <h2>Niveles y exámenes de portugués</h2>
+    <p>Los exámenes CAPLE son los oficiales de portugués europeo, reconocidos por el Estado portugués. Cada nivel del Marco Común Europeo tiene su examen.</p>
+  </div>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Nivel</th><th>Examen CAPLE</th><th>Qué acredita</th><th>Para quién suele ser</th></tr></thead>
+    <tbody>
+      <tr><td class="lvl">A1</td><td><code>ACESSO</code></td><td>Comprensión y frases básicas de la vida diaria.</td><td>Primer contacto con el idioma.</td></tr>
+      <tr><td class="lvl">A2</td><td><code>CIPLE</code></td><td>Comunicación sencilla en situaciones habituales.</td><td>Nacionalidad portuguesa (nivel mínimo exigido).</td></tr>
+      <tr><td class="lvl">B1</td><td><code>DEPLE</code></td><td>Autonomía en viajes, trabajo y estudios.</td><td>Trabajo o estudios en Portugal.</td></tr>
+      <tr><td class="lvl">B2</td><td><code>DIPLE</code></td><td>Fluidez y textos complejos.</td><td>Universidad, oposiciones, puestos cualificados.</td></tr>
+      <tr><td class="lvl">C1</td><td><code>DAPLE</code></td><td>Dominio avanzado, uso flexible y preciso.</td><td>Ámbito académico y profesional exigente.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Las convocatorias CAPLE son varias al año en centros autorizados. Cuando hablemos te digo cuál es la siguiente que te encaja y cuánto tiempo de preparación necesitas.</p>
+</section>
+
+<section id="contacto">
+  <div class="contact">
+    <div>
+      <h2>Hablamos</h2>
+      <p class="big" style="margin-top:1rem">Cuéntame qué idioma, para qué y cuándo puedes. Te respondo con un horario posible.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/34XXXXXXXXX?text=Hola%2C%20me%20interesan%20las%20clases%20de%20idiomas" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn ghost" href="mailto:correo@ejemplo.com">Enviar un correo</a>
+      </div>
+    </div>
+    <dl>
+      <dt>WhatsApp</dt><dd><mark class="todo">+34 XXX XXX XXX</mark></dd>
+      <dt>Correo</dt><dd><mark class="todo">correo@ejemplo.com</mark></dd>
+      <dt>Modalidad</dt><dd>Online y presencial en <mark class="todo">ciudad / zona</mark></dd>
+      <dt>Horario</dt><dd>Tardes entre semana. <mark class="todo">Viernes y sábado, a confirmar</mark></dd>
+      <dt>Precio</dt><dd><mark class="todo">XX € / hora</mark>, individual. Se confirma en la videollamada.</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 <mark class="todo">Nombre y apellido</mark></span>
+  <span>Portugués europeo · Francés · Inglés</span>
+</footer>
+</div>
+<!-- BODY-END -->
+</body>
+</html>
